@@ -21,7 +21,7 @@ dotenv.config();
 
 const SectionNavigation = ({ sectionIds, activeSection, onClick }) => {
   return (
-    <div className="fixed right-1 sm:hidden top-1/2 transform -translate-y-1/2 flex flex-col items-center space-y-6 z-50 md:block sm:block">
+    <div className="fixed right-1 top-1/2 transform -translate-y-1/2 flex flex-col items-center space-y-6 z-50 hidden sm:block">
       <div className="p-2 rounded-full bg-opacity-65">
         {sectionIds.map((_, index) => (
           <div
@@ -41,7 +41,6 @@ const SectionNavigation = ({ sectionIds, activeSection, onClick }) => {
     </div>
   );
 };
-
 const SocialMediaIcons = () => {
   return (
     <div className="flex justify-between items-center mr-4">
@@ -52,7 +51,7 @@ const SocialMediaIcons = () => {
         <div
           className="flex space-x-4"
           style={{
-            animation: "slideEmails 10s linear infinite",
+            animation: "slideEmails 60s linear infinite",  // Increased duration to 60s
             whiteSpace: "nowrap",
           }}
         >
@@ -144,6 +143,7 @@ const SocialMediaIcons = () => {
     </div>
   );
 };
+
 
 const PageWithDots = () => {
   const [activeSection, setActiveSection] = useState(0);
