@@ -1,0 +1,215 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.text-logo {
+  font-family: 'Abril Fatface';
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Ample+Display:wght@400;700&display=swap');
+
+.text-shadow {
+  font-family: 'Ample Display', sans-serif;
+  /* Ensure you have fallback fonts */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  /* Customize the shadow */
+}
+
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.5s forwards;
+  /* Animate over 0.5 seconds */
+}
+
+.word {
+  display: inline-block;
+  /* To enable individual word animation */
+  opacity: 1;
+  /* Ensure the word is visible before animation */
+}
+
+
+.card {
+  max-width: 300px;
+  /* Limits the card width */
+  border-radius: 0.5rem;
+  /* Rounds the corners of the card */
+  background-color: #fff;
+  /* Sets the card background to white */
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  /* Adds a subtle shadow for depth */
+  border: 1px solid transparent;
+  /* Optional: You can remove this if not needed */
+  overflow: hidden;
+  /* Ensures any overflow is hidden, especially for images */
+}
+
+.card a {
+  text-decoration: none;
+  /* Removes underline from links */
+}
+
+.content {
+  padding: 1.1rem;
+  /* Adds padding inside the content area */
+}
+
+.image {
+  object-fit: cover;
+  /* Ensures the image covers the area */
+  width: 100%;
+  /* Full width of the card */
+  height: 150px;
+  /* Fixed height for the image */
+  background-color: rgb(229, 229, 229);
+  /* Light gray background for better visibility */
+}
+
+.title {
+  color: #111827;
+  /* Dark text color for the title */
+  font-size: 1.125rem;
+  /* Font size for the title */
+  line-height: 1.75rem;
+  /* Line height for better readability */
+  font-weight: 600;
+  /* Bold weight for the title */
+}
+
+.desc {
+  margin-top: 0.5rem;
+  /* Adds space above the description */
+  color: #6B7280;
+  /* Medium gray text color for description */
+  font-size: 0.875rem;
+  /* Font size for the description */
+  line-height: 1.25rem;
+  /* Line height for better readability */
+}
+
+.action {
+  display: inline-flex;
+  /* Uses flexbox for the action button */
+  margin-top: 1rem;
+  /* Adds space above the action button */
+  color: #ffffff;
+  /* White text color for the button */
+  font-size: 0.875rem;
+  /* Font size for the button text */
+  line-height: 1.25rem;
+  /* Line height for better readability */
+  font-weight: 500;
+  /* Semi-bold weight for the button text */
+  align-items: center;
+  /* Centers items vertically */
+  gap: 0.25rem;
+  /* Space between text and icon */
+  background-color: #6b7280;
+  /* Button background color */
+  padding: 4px 8px;
+  /* Padding for the button */
+  border-radius: 4px;
+  /* Rounds the button corners */
+  transition: background-color 0.3s ease;
+  /* Smooth transition for hover effect */
+}
+
+.action:hover {
+  background-color: #374151;
+  /* Darker shade on hover */
+}
+
+.action span {
+  transition: transform 0.3s ease;
+  /* Smooth transition for icon movement */
+}
+
+.action:hover span {
+  transform: translateX(4px);
+  /* Moves icon to the right on hover */
+}
+
+.card {
+  max-width: 300px;
+  /* Set a max width for the card */
+  border-radius: 0.5rem;
+  /* Rounded corners */
+  background-color: #fff;
+  /* White background */
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  /* Shadow for depth */
+  border: 1px solid transparent;
+  /* Optional border */
+  display: flex;
+  /* Enable Flexbox for content alignment */
+  flex-direction: column;
+  /* Stack content vertically */
+  align-items: center;
+  /* Center align items horizontally */
+}
+
+h1.relative {
+  position: relative;
+}
+
+h1.relative div {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  background-color: white;
+  height: 2px;
+  /* Change height as needed */
+  opacity: 0;
+  /* Start hidden */
+  transition: opacity 0.5s, transform 0.5s;
+}
+
+h1.relative div.visible {
+  opacity: 1;
+  /* Show underline */
+  transform: translateY(0);
+  /* Move to the bottom */
+}
+
+.ourExperties {
+  --bg: radial-gradient(#f5f5f5 5%, #ffffff00 6%);
+  --size: 3rem;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(#fffbfb 5%, #ffffff00 6%),
+    radial-gradient(#ffffff 5%, #0000 6%);
+  background-position: 0 0, calc(var(--size) / 2) calc(var(--size) / 2);
+  background-size: var(--size) var(--size);
+}
+
+@layer utilities {
+  /* Random polygon clip-path */
+  .clip-complex-random-shape {
+    clip-path: polygon(20% 0%, 80% 10%, 100% 40%, 60% 70%, 30% 90%, 10% 50%, 0% 20%);
+  }
+
+  .clip-amoeba-shape {
+    clip-path: polygon(25% 10%, 55% 5%, 75% 40%, 95% 70%, 60% 90%, 35% 70%, 5% 50%, 10% 30%);
+  }
+  .clip-fluid-border {
+    clip-path: polygon(40% 0%, 70% 10%, 90% 30%, 100% 50%, 90% 70%, 70% 90%, 40% 100%, 10% 90%, 0% 70%, 10% 50%, 0% 30%, 10% 10%);
+    border-radius: 50%;
+  }
+}
+
+
+
+

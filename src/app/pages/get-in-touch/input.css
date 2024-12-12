@@ -1,0 +1,9 @@
+.customInput:focus+.inputLabel,
+.customInput:not(:placeholder-shown)+.inputLabel {
+    transform: translateY(-1.5rem) scale(0.85);
+    color: #0056b3;
+}
+
+.inputLabel {
+    transition: transform 0.3s ease, color 0.3s ease;
+}
